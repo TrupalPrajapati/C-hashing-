@@ -1,0 +1,98 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <map>
+// using namespace std;
+
+
+// number Hashing
+// int main() {
+//   int n;
+//   cin>>n;
+//   int arr[n];
+//   for(int i=0;i<n;i++){
+//       cin>>arr[i];
+//       }
+       
+//     //   precompute
+//     int hash[13]={0};
+//     for(int i=0;i<n;i++){
+//         hash[arr[i]] +=1;
+//         }
+        
+//         int q;
+//         cin>>q;
+//         while(q--){
+//             int number;
+//             cin>>number;
+//             cout<<hash[number]<<"\n";
+//         }
+// }
+
+// character Hashing 
+// int main(){
+//     std::string s ;
+//     std::cin>>s;
+    
+//     int hash[26]={0};
+//     for(int i=0;i<s.size();i++){
+//         hash[s[i]-'a']++;
+//     }
+    
+//     int q;
+//     std::cin>>q;
+//     while(q--){
+//         char c;
+//         std::cin>>c;
+//         std::cout<<hash[c-'a'];
+//     }
+//     return 0;
+// }
+
+// upper case and lowercase in same hash array
+// int main(){
+//     std::string s ;
+//     std::cin>>s;
+    
+//     int hash[256]={0};
+//     for(int i=0;i<s.size();i++){
+//         hash[s[i]]++;
+//     }
+    
+//     int q;
+//     std::cin>>q;
+//     while(q--){
+//         char c;
+//         std::cin>>c;
+//         std::cout<<hash[c];
+//     }
+//     return 0;
+// }
+
+
+
+// number map
+int main(){
+    int n;
+    std::cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++){
+        std::cin>>arr[i];
+        }
+        
+        // pre compute
+        std::map<int,int>mpp;
+        for(int i=0;i<n;i++){
+            mpp[arr[i]]++;
+        }
+        
+        
+        int q;
+        std::cin>>q;
+        while(q--){
+            int number;
+            std::cin>>number;
+            // fetch
+            std::cout<<mpp[number]<<"\n";
+        }
+     return 0;   
+}
